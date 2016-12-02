@@ -126,8 +126,6 @@ var customScripts = {
         $(slides).removeClass('active');
         $(slides).eq(0).addClass('active');
         $(customScripts.lastfancybox).find('.carousel-indicators').eq(0).addClass('active');
-        // $('.fancybox-inner .carousel-control').appendTo($('.fancybox-inner .carousel'));
-        // $('.fancybox-inner .project_info_toggler').appendTo($('.fancybox-inner .portfolio_project'));
         $(customScripts.lastfancybox).find('.project_info').css('display', 'none');
         $(customScripts.lastfancybox).find('.project_info_toggler').removeClass('active');
     },
