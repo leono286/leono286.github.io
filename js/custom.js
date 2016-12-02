@@ -57,6 +57,7 @@ var customScripts = {
                 customScripts.carouselReset();
             },
             afterShow: function(){
+                // customScripts.setCarouselHelpers();
                 customScripts.showInfoToggler();
             }
         });
@@ -125,6 +126,14 @@ var customScripts = {
         $(slides).removeClass('active');
         $(slides).eq(0).addClass('active');
         $(customScripts.lastfancybox).find('.carousel-indicators').eq(0).addClass('active');
+        // $('.fancybox-inner .carousel-control').appendTo($('.fancybox-inner .carousel'));
+        // $('.fancybox-inner .project_info_toggler').appendTo($('.fancybox-inner .portfolio_project'));
+        $(customScripts.lastfancybox).find('.project_info').css('display', 'none');
+        $(customScripts.lastfancybox).find('.project_info_toggler').removeClass('active');
+    },
+    setCarouselHelpers: function(){
+        // $('.fancybox-inner .carousel-control').appendTo($('.fancybox-inner'));
+        // $('.fancybox-inner .project_info_toggler').appendTo($('.fancybox-inner'));
     },
     showInfoToggler: function () {
         var pos = $('.fancybox-wrap').position();
@@ -136,12 +145,12 @@ var customScripts = {
     enableInfoTogglers: function(){
         $('.project_info_toggler').click(function(){
             if ( $(this).hasClass('active') ){
-                $(this).next('.project_info').toggle(350);
+                $(this).siblings('.project_info').toggle(350);
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
                 var fancyboxwrap = $('.fancybox-wrap');
-                var elm2show = $(this).next('.project_info');
+                var elm2show = $(this).siblings('.project_info');
                 var top = fancyboxwrap.position().top;
                 var width = fancyboxwrap.find('.carousel').width();
                 if( fancyboxwrap.height() > elm2show.find('ul').height() ){

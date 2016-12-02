@@ -1244,6 +1244,7 @@ body {
 .carousel-control.right, .carousel-control.left {
     background-image: none;
     position: fixed;
+    z-index: 5000;
 }
 .carousel-control .glyphicon-chevron-left:before, .carousel-control .glyphicon-chevron-right:before {
     padding: 6px 9px;
@@ -1319,7 +1320,7 @@ ol.carousel-indicators {
     width: 38px;
     height: 38px;
     background: rgba(0,0,0,0.6);
-    z-index: 501;
+    z-index: 5001;
 }
 .project_info_toggler:hover {
     cursor: pointer;
