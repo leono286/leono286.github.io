@@ -57,8 +57,8 @@ var customScripts = {
                 customScripts.carouselReset();
             },
             afterShow: function(){
-                // customScripts.setCarouselHelpers();
-                customScripts.showInfoToggler();
+                customScripts.setCarouselHelpers();
+                // customScripts.showInfoToggler();
             }
         });
     },
@@ -130,8 +130,22 @@ var customScripts = {
         $(customScripts.lastfancybox).find('.project_info_toggler').removeClass('active');
     },
     setCarouselHelpers: function(){
-        // $('.fancybox-inner .carousel-control').appendTo($('.fancybox-inner'));
-        // $('.fancybox-inner .project_info_toggler').appendTo($('.fancybox-inner'));
+        var fancyboxpos = $('.fancybox-wrap').position();
+        var facyboxwidth = $('.fancybox-wrap').width();
+        var facyboxheight = $('.fancybox-wrap').width();
+        var controlwidth = $('.fancybox-wrap .right.carousel-control').width();
+        var carouselheight = $('.fancybox-wrap .carousel').height();
+        $('.fancybox-wrap .project_info_toggler').css({
+            position: "fixed",
+            top: fancyboxpos.top,
+            left: fancyboxpos.left
+        });
+        if(facyboxheight < carouselheight){
+            controlwidth += 16;
+        }
+        $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left);
+        $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth);
+        $('.fancybox-wrap .carousel-control span').fadeIn();
     },
     showInfoToggler: function () {
         var pos = $('.fancybox-wrap').position();

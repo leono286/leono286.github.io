@@ -1253,13 +1253,13 @@ body {
     border: 2px solid #fff;
 }
 .carousel-control {
-    width: 10%;
+    width: 8%;
 }
 .carousel-control .glyphicon-chevron-left:before{
     padding: 6px 10px 6px 8px;
 }
 .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
-    position: fixed;
+    display: none;
 }
 .carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
     right: 3%;
@@ -1294,7 +1294,7 @@ ol.carousel-indicators {
     right: 0;
     background-color: rgba(0,0,0,0.8);
     display: none;
-    z-index: 500;
+    z-index: 50002;
 }
 .project_info * {
     color: #fff;
@@ -1320,7 +1320,7 @@ ol.carousel-indicators {
     width: 38px;
     height: 38px;
     background: rgba(0,0,0,0.6);
-    z-index: 5001;
+    z-index: 5002;
 }
 .project_info_toggler:hover {
     cursor: pointer;
