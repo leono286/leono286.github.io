@@ -1380,3 +1380,11 @@ nav#filter a {
 nav#filter a:hover, nav#filter a.current:focus{
     color: #fff;
 }
+
+#contactMe .container{
+    text-align: center;
+}
+#contactMe .container > * {
+    display: inline-block;
+    vertical-align: middle;
+}
