@@ -137,14 +137,11 @@ var customScripts = {
         var carouselheight = $('.fancybox-wrap .carousel').height();
         $('.fancybox-wrap .project_info_toggler').css({
             position: "fixed",
-            top: fancyboxpos.top,
+            top: fancyboxpos.top + 25,
             left: fancyboxpos.left
         });
-        if(facyboxheight < carouselheight){
-            controlwidth += 16;
-        }
-        $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left);
-        $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth);
+        $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
+        $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
         $('.fancybox-wrap .carousel-control span').fadeIn();
     },
     showInfoToggler: function () {

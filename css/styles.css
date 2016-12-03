@@ -1162,7 +1162,7 @@ body {
     #timeline .timeline-movement .timeline-item {
         padding: 10px;
         display: block;
-        width: 100%;
+        width: 99%;
     }
 }
 
@@ -1294,7 +1294,7 @@ ol.carousel-indicators {
     right: 0;
     background-color: rgba(0,0,0,0.8);
     display: none;
-    z-index: 50002;
+    z-index: 5001;
 }
 .project_info * {
     color: #fff;
@@ -1315,22 +1315,29 @@ ol.carousel-indicators {
 }
 .project_info_toggler {
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 0;
-    width: 38px;
-    height: 38px;
-    background: rgba(0,0,0,0.6);
+    width: 52px;
+    height: 52px;
+    background: #cc0000;
     z-index: 5002;
 }
-.project_info_toggler:hover {
+.project_info_toggler:hover, .project_info_toggler.active:hover {
     cursor: pointer;
+    background-color: rgba(204,0,0,0.6);
+    transition: all 0.5s;
 }
 .project_info_toggler i.fa.fa-info.fa-2x {
-    margin: 5px 14px;
+    margin: 12px 21px;
     color: #fff;
 }
 .project_info_toggler.active {
-    background-color: #fff;
+    background-color: #FFF;
+    transition: all 0.5s;
+}
+.project_info_toggler.active:hover i.fa.fa-info.fa-2x {
+    color: #FFF;
+    transition: all 0.5s;
 }
 .project_info_toggler.active i.fa.fa-info.fa-2x {
     color: rgba(0,0,0,0.65);
