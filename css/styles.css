@@ -1394,6 +1394,6 @@ nav#filter a:hover, nav#filter a.current:focus{
         /*position: fixed;
         top: 90px;
         right: 0px;*/
-        z-index: 6001;
+        /*z-index: 6001;*/
     }
 }

@@ -141,7 +141,8 @@ var customScripts = {
                 top: fancyboxpos.top - 18,
                 left: fancyboxpos.left + facyboxwidth - 18,
                 right: "auto",
-                position: "fixed"
+                position: "fixed",
+                z-index: 7500;
             });
         }
         fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
