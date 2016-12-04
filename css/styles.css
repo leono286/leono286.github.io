@@ -1310,6 +1310,7 @@ ol.carousel-indicators {
     width: 800px;
     top: calc(20px + 4%);
     height: 300px;
+    z-index: 6002;
 }
 .project_info_toggler {
     position: absolute;
@@ -1393,5 +1394,6 @@ nav#filter a:hover, nav#filter a.current:focus{
         position: fixed;
         top: 90px;
         right: 0px;
+        z-index: 6001;
     }
 }
