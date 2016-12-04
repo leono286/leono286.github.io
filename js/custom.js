@@ -135,14 +135,15 @@ var customScripts = {
         var carouselheight = $('.fancybox-wrap .carousel').height();
         $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
         $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
-        if ($('.fancybox-wrap .fancybox-close').css('position') == "fixed"){
+        var attachment = (screen.width < 769) ? "absolute" : "fixed";
+        if (attachment == "absolute"){
             $('.fancybox-wrap .fancybox-close').css({
                 top: fancyboxpos.top - 18,
                 left: fancyboxpos.left + facyboxwidth - 18,
-                right: "auto"
+                right: "auto",
+                position: "fixed"
             });
         }
-        var attachment = (screen.width < 769) ? "absolute" : "fixed";
         fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
         fancyboxpos.left = (attachment == "absolute") ? 0 : fancyboxpos.left;
         $('.fancybox-wrap .project_info_toggler').css({

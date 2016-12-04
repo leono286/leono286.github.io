@@ -1391,9 +1391,9 @@ nav#filter a:hover, nav#filter a.current:focus{
 }
 @media (max-width: 768px) {
     .fancybox-wrap .fancybox-close {
-        position: fixed;
+        /*position: fixed;
         top: 90px;
-        right: 0px;
+        right: 0px;*/
         z-index: 6001;
     }
 }
