@@ -58,7 +58,6 @@ var customScripts = {
             },
             afterShow: function(){
                 customScripts.setCarouselHelpers();
-                // customScripts.showInfoToggler();
             }
         });
     },
@@ -135,22 +134,17 @@ var customScripts = {
         var facyboxheight = $('.fancybox-wrap').width();
         var controlwidth = $('.fancybox-wrap .right.carousel-control').width();
         var carouselheight = $('.fancybox-wrap .carousel').height();
-        var attachment = (screen.width < 769) ? "relative" : "fixed";
+        var attachment = (screen.width < 769) ? "absolute" : "fixed";
+        $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
+        $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
+        fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
+        fancyboxpos.left = (attachment == "absolute") ? 0 : fancyboxpos.left;
         $('.fancybox-wrap .project_info_toggler').css({
             position: attachment,
             top: fancyboxpos.top + 25,
             left: fancyboxpos.left
         });
-        $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
-        $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
         $('.fancybox-wrap .carousel-control span').fadeIn();
-    },
-    showInfoToggler: function () {
-        var pos = $('.fancybox-wrap').position();
-        $('.fancybox-wrap .project_info_toggler').css({
-            position: "fixed",
-            top: pos.top,
-            left: pos.left});
     },
     enableInfoTogglers: function(){
         $('.project_info_toggler').click(function(){
