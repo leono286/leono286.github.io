@@ -142,7 +142,7 @@ var customScripts = {
                 left: fancyboxpos.left + facyboxwidth - 18,
                 right: "auto",
                 position: "fixed",
-                z-index: 7500;
+                zIndex: 7500;
             });
         }
         fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
