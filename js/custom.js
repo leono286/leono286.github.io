@@ -131,12 +131,18 @@ var customScripts = {
     setCarouselHelpers: function(){
         var fancyboxpos = $('.fancybox-wrap').position();
         var facyboxwidth = $('.fancybox-wrap').width();
-        var facyboxheight = $('.fancybox-wrap').width();
         var controlwidth = $('.fancybox-wrap .right.carousel-control').width();
         var carouselheight = $('.fancybox-wrap .carousel').height();
-        var attachment = (screen.width < 769) ? "absolute" : "fixed";
         $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
         $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
+        if ($('.fancybox-wrap .fancybox-close').css('position') == "fixed"){
+            $('.fancybox-wrap .fancybox-close').css({
+                top: fancyboxpos.top - 18,
+                left: fancyboxpos.left + facyboxwidth - 18,
+                right: "auto"
+            });
+        }
+        var attachment = (screen.width < 769) ? "absolute" : "fixed";
         fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
         fancyboxpos.left = (attachment == "absolute") ? 0 : fancyboxpos.left;
         $('.fancybox-wrap .project_info_toggler').css({
