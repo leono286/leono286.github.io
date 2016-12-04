@@ -135,8 +135,9 @@ var customScripts = {
         var facyboxheight = $('.fancybox-wrap').width();
         var controlwidth = $('.fancybox-wrap .right.carousel-control').width();
         var carouselheight = $('.fancybox-wrap .carousel').height();
+        var attachment = (screen.width < 769) ? "relative" : "fixed";
         $('.fancybox-wrap .project_info_toggler').css({
-            position: "fixed",
+            position: attachment,
             top: fancyboxpos.top + 25,
             left: fancyboxpos.left
         });
