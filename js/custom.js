@@ -136,15 +136,7 @@ var customScripts = {
         $('.fancybox-wrap .left.carousel-control').css('left',fancyboxpos.left + 16);
         $('.fancybox-wrap .right.carousel-control').css('left',fancyboxpos.left + facyboxwidth - controlwidth - 16);
         var attachment = (screen.width < 769) ? "absolute" : "fixed";
-        if (attachment == "absolute"){
-            $('.fancybox-wrap .fancybox-close').css({
-                top: fancyboxpos.top - 18,
-                left: fancyboxpos.left + facyboxwidth - 18,
-                right: "auto",
-                position: "fixed",
-                zIndex: 7500
-            });
-        }
+
         fancyboxpos.top = (attachment == "absolute") ? 0 : fancyboxpos.top;
         fancyboxpos.left = (attachment == "absolute") ? 0 : fancyboxpos.left;
         $('.fancybox-wrap .project_info_toggler').css({
@@ -172,6 +164,13 @@ var customScripts = {
                     top: top,
                     width: width,
                 });
+                if (screen.width < 769){
+                    $('.fancybox-wrap .project_info ul').css({
+                        position: "absolute",
+                        top: 10,
+                        left: 0
+                    });
+                }
                 elm2show.toggle(350);
             }
         });
